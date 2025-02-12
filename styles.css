@@ -15,22 +15,22 @@ body {
 .about-info-column { 
   background-color: #4292ad; 
   color: white; 
-  padding: 2rem; 
+  padding: 1.5rem; 
   border-radius: 8px; 
   min-height: 100%; 
   text-align: left; 
-  font-size: 0.9rem; 
+  font-size: 1rem; 
 }
 .about-info-column img { max-width: 100%; border-radius: 50%; margin-bottom: 1rem; }
 .about-info-column ul { padding-left: 0; }
 .about-info-column ul li { margin-bottom: 0.5rem; }
 .about-info-column ul li a { text-decoration: none; color: white; display: inline-flex; align-items: center; }
 .about-info-column ul li a span { margin-left: 5px; text-decoration: none; }
-#projects { margin-top: 4rem; }
-#skills { margin-top: 4rem; }
+#projects { margin-top: 2rem; }
+#skills { margin-top: 2rem; }
 main { padding-top: 2rem; }
 #projects ul { margin-left: 0; }
-main { padding-top: 2rem; }
+main { padding-top: 1rem; }
 #skills ul { margin-left: 0; }
 .row { display: flex; flex-wrap: wrap; gap: 2rem; align-items: stretch; }
 .col-md-8 { flex: 1 1 65%; }
