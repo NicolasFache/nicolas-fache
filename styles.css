@@ -1,0 +1,75 @@
+:root {
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Apply custom font globally */
+body { 
+  background-color: #F0EAD6; 
+  font-family: var(--font-family-sans-serif); 
+}
+
+.bg-custom-blue { background-color: #4292ad !important; }
+.about-container { display: flex; flex-wrap: wrap; }
+.about-text { flex: 1 1 60%; padding-right: 2rem; }
+.about-info-column { 
+  background-color: #4292ad; 
+  color: white; 
+  padding: 2rem; 
+  border-radius: 8px; 
+  min-height: 100%; 
+  text-align: left; 
+  font-size: 0.9rem; 
+}
+.about-info-column img { max-width: 100%; border-radius: 50%; margin-bottom: 1rem; }
+.about-info-column ul { padding-left: 0; }
+.about-info-column ul li { margin-bottom: 0.5rem; }
+.about-info-column ul li a { text-decoration: none; color: white; display: inline-flex; align-items: center; }
+.about-info-column ul li a span { margin-left: 5px; text-decoration: none; }
+#projects { margin-top: 4rem; }
+#skills { margin-top: 4rem; }
+main { padding-top: 2rem; }
+#projects ul { margin-left: 0; }
+main { padding-top: 2rem; }
+#skills ul { margin-left: 0; }
+.row { display: flex; flex-wrap: wrap; gap: 2rem; align-items: stretch; }
+.col-md-8 { flex: 1 1 65%; }
+.col-md-4 { flex: 1 1 30%; max-width: 100%; }
+
+/* Skill badges styling */
+.skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 0.5rem;
+}
+
+.skill-badge {
+  background-color: #4d687c;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .row { flex-direction: column; }
+  .about-info-column { order: 1; margin-bottom: 2rem; }
+  #about { order: 2; }
+  #projects { order: 3; }
+}
+
+/* Add underline on hover */
+.about-info-column ul li a:hover span {
+  text-decoration: underline;
+}
+
+/* Specific style for the education section */
+.about-info-column h3 {
+  font-size: 1rem;
+}
+.about-info-column p {
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}

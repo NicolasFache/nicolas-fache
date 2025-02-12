@@ -2,109 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://cdn.jsdelivr.net;
+    style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
+    img-src 'self' data:;
+    font-src 'self' https://cdnjs.cloudflare.com;
+    connect-src 'self';
+    frame-ancestors 'none';
+  ">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nicolas Fache's Portfolio</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+  <title>Nicolas Fache</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <!-- Updated Font Families -->
-  <style>
-    :root {
-      --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    }
-    
-    /* Apply custom font globally */
-    body { 
-      background-color: #F0EAD6; 
-      font-family: var(--font-family-sans-serif); 
-    }
-
-    .bg-custom-blue { background-color: #4292ad !important; }
-    .about-container { display: flex; flex-wrap: wrap; }
-    .about-text { flex: 1 1 60%; padding-right: 2rem; }
-    .about-info-column { 
-      background-color: #4292ad; 
-      color: white; 
-      padding: 2rem; 
-      border-radius: 8px; 
-      min-height: 100%; 
-      text-align: left; 
-      font-size: 0.9rem; 
-    }
-    .about-info-column img { max-width: 100%; border-radius: 50%; margin-bottom: 1rem; }
-    .about-info-column ul { padding-left: 0; }
-    .about-info-column ul li { margin-bottom: 0.5rem; }
-    .about-info-column ul li a { text-decoration: none; color: white; display: inline-flex; align-items: center; }
-    .about-info-column ul li a span { margin-left: 5px; text-decoration: none; }
-    #projects { margin-top: 4rem; }
-    #skills { margin-top: 4rem; }
-    main { padding-top: 2rem; }
-    #projects ul { margin-left: 0; }
-    main { padding-top: 2rem; }
-    #skills ul { margin-left: 0; }
-    .row { display: flex; flex-wrap: wrap; gap: 2rem; align-items: stretch; }
-    .col-md-8 { flex: 1 1 65%; }
-    .col-md-4 { flex: 1 1 30%; max-width: 100%; }
-    
-    /* Skill badges styling */
-    .skills-section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 0.5rem;
-    }
-
-    .skill-badge {
-      background-color: #4d687c;
-      color: white;
-      padding: 8px 12px;
-      border-radius: 4px;
-      font-size: 0.85rem;
-    }
-
-    /* Responsive Layout */
-    @media (max-width: 768px) {
-      .row { flex-direction: column; }
-      .about-info-column { order: 1; margin-bottom: 2rem; }
-      #about { order: 2; }
-      #projects { order: 3; }
-    }
-
-    /* Add underline on hover */
-    .about-info-column ul li a:hover span {
-      text-decoration: underline;
-    }
-
-    /* Specific style for the education section */
-    .about-info-column h3 {
-      font-size: 1rem;
-    }
-    .about-info-column p {
-      margin-bottom: 0.35rem;
-      font-size: 0.9rem;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container">
-      <a class="navbar-brand" href="#">Nicolas Fache's Portfolio</a>
+      <a class="navbar-brand" href="#" rel="noopener noreferrer">Nicolas Fache</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="project1.html">Autonomous Driving Sim</a>
+            <a class="nav-link" href="project1.html" rel="noopener noreferrer">Autonomous Driving Sim</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="project2.html">Railway Systems</a>
+            <a class="nav-link" href="project2.html" rel="noopener noreferrer">Railway Systems</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="project3.html">Project 3</a>
+            <a class="nav-link" href="project3.html" rel="noopener noreferrer">Project 3</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="car.html">Car Project</a>
+            <a class="nav-link" href="car.html" rel="noopener noreferrer">Car Project</a>
           </li>
         </ul>
       </div>
@@ -127,19 +64,19 @@
         <section id="projects">
           <h2>Projects</h2>
           <ul>
-            <li><a href="project1.html">Project 1: MATLAB Autonomous Driving Simulation</a></li>
+            <li><a href="project1.html" rel="noopener noreferrer">Project 1: MATLAB Autonomous Driving Simulation</a></li>
             <ul>
                 <li>place holder</li>
             </ul>
-            <li><a href="project2.html">Project 2: Modeling Railway Systems with Physarum Polycephalum</a></li>
+            <li><a href="project2.html" rel="noopener noreferrer">Project 2: Modeling Railway Systems with Physarum Polycephalum</a></li>
             <ul>
                 <li>place holder</li>
             </ul>
-            <li><a href="project3.html">Project 3: Additional Content</a></li>
+            <li><a href="project3.html" rel="noopener noreferrer">Project 3: Additional Content</a></li>
             <ul>
                 <li>place holder</li>
             </ul>
-            <li><a href="car.html">Car Project: Details Coming Soon</a></li>
+            <li><a href="car.html" rel="noopener noreferrer">Car Project: Details Coming Soon</a></li>
             <ul>
                 <li>place holder</li>
             </ul>
@@ -220,6 +157,8 @@
     </div>
   </footer>
 
+  <script src="script.js"></script>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

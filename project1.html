@@ -2,22 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://cdn.jsdelivr.net;
+    style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
+    img-src 'self' data:;
+    font-src 'self' https://cdnjs.cloudflare.com;
+    connect-src 'self';
+    frame-ancestors 'none';
+  ">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 1 - MATLAB Autonomous Driving Simulation</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+  <title>MATLAB Autonomous Driving Simulation</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #F0EAD6;
-    }
-    .bg-custom-purple {
-      background-color: #4B0082 !important;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Nicolas Fache's Portfolio</a>
+      <a class="navbar-brand" href="index.html">Nicolas Fache</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -41,10 +47,12 @@
   </nav>
 
   <main class="container mt-5">
-    <h1>Project 1 - MATLAB Autonomous Driving Simulation</h1>
+    <h1>MATLAB Autonomous Driving Simulation</h1>
     <p>Will be adding MATLAB and C code to this soon...</p>
   </main>
 
+  <script src="script.js"></script>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
